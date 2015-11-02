@@ -1,0 +1,16 @@
+{
+  "name": "domohome-client",
+  "version": "0.1.0",
+  "description": "Domohome Project - Client Side",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Mathieu Lallemand",
+  "license": "GPL-3.0",
+  "dependencies": {
+    "express": "^4.13.3",
+    "minified": "^1.0.1",
+    "vue": "^1.0.4"
+  }
+}

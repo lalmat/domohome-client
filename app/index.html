@@ -1,0 +1,32 @@
+<!doctype html>
+<html>
+  <head>
+    <title>DomoHome Client</title>
+    <link href='https://fonts.googleapis.com/css?family=Open+Sans:300' rel='stylesheet' type='text/css'>
+    <style>
+      body {font-family: 'Open Sans', sans-serif;}
+      button {width:14em; height:3em;}
+      h3,#cmdPanel {text-align:center;}
+    </style>
+  </head>
+
+  <body>
+    <h3>DomoHome Demo</h3>
+    <div id="cmdPanel">
+      Led connected on Pin 7 (Door Lock)<br /> 
+      <button id="cmdSwitch" v-on:click="stateToggle">
+        <span v-if="door_lock==true">Turn OFF (Open)</span>
+        <span v-if="door_lock==false">Turn ON (Close)</span>
+      </button>
+    </div>
+    <script src='vuejs/vue.min.js'></script>
+    <script src='minified/minified.js'></script>
+    <script src='minified/minified-web.js'></script>
+    <script>
+      var MINI = require('minified');
+      var _=MINI._, $=MINI.$, $$=MINI.$$, EE=MINI.EE, HTML=MINI.HTML;
+      var domoHomeAPI = 'http://192.168.200.35:8080';
+    </script>
+    <script src='domohome-client.js'></script>
+  </body>
+</html>
